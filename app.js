@@ -26,7 +26,7 @@ function pobierzLiczbę1() {
 
   while (!kontynuuj) {
     var liczba1 = prompt("Podaj pierwszą liczbę: ");
-    liczba1 = parseFloat(liczba1);
+    liczba1 = Number(liczba1);
 
     if (isNaN(liczba1)) {
       console.log("Proszę podać poprawną liczbę!");
@@ -43,7 +43,7 @@ function pobierzLiczbę2(działanie) {
 
   while (!kontynuuj) {
     var liczba2 = prompt("Podaj drugą liczbę: ");
-    liczba2 = parseFloat(liczba2);
+    liczba2 = Number(liczba2);
 
     if (isNaN(liczba2)) {
       console.log("Proszę podać poprawną liczbę!");
