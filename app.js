@@ -1,10 +1,10 @@
 const prompt = require("prompt-sync")({ sigint: true });
 
 function pobierzDziałanie() {
-  var kontynuuj = false;
+  let kontynuuj = false;
 
   while (!kontynuuj) {
-    var działanie = prompt("Jakie działanie chcesz wykonać? ");
+    let działanie = prompt("Jakie działanie chcesz wykonać? ");
 
     if (
       działanie === "dodawanie" ||
@@ -22,10 +22,10 @@ function pobierzDziałanie() {
 }
 
 function pobierzLiczbę1() {
-  var kontynuuj = false;
+  let kontynuuj = false;
 
   while (!kontynuuj) {
-    var liczba1 = prompt("Podaj pierwszą liczbę: ");
+    let liczba1 = prompt("Podaj pierwszą liczbę: ");
     liczba1 = Number(liczba1);
 
     if (isNaN(liczba1)) {
@@ -39,10 +39,10 @@ function pobierzLiczbę1() {
 }
 
 function pobierzLiczbę2(działanie) {
-  var kontynuuj = false;
+  let kontynuuj = false;
 
   while (!kontynuuj) {
-    var liczba2 = prompt("Podaj drugą liczbę: ");
+    let liczba2 = prompt("Podaj drugą liczbę: ");
     liczba2 = Number(liczba2);
 
     if (isNaN(liczba2)) {
