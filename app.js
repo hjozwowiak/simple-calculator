@@ -1,6 +1,6 @@
 const prompt = require("prompt-sync")({ sigint: true });
 
-function pobierzDziałanie() {
+function pobierzDzialanie() {
   let kontynuuj = false;
 
   while (!kontynuuj) {
@@ -21,7 +21,7 @@ function pobierzDziałanie() {
   return działanie;
 }
 
-function pobierzLiczbę1() {
+function pobierzLiczbe1() {
   let kontynuuj = false;
 
   while (!kontynuuj) {
@@ -38,7 +38,7 @@ function pobierzLiczbę1() {
   return liczba1;
 }
 
-function pobierzLiczbę2(działanie) {
+function pobierzLiczbe2(działanie) {
   let kontynuuj = false;
 
   while (!kontynuuj) {
@@ -72,10 +72,10 @@ function wykonajDziałanie(działanie, liczba1, liczba2) {
 }
 
 function main() {
-  działanie = pobierzDziałanie();
+  działanie = pobierzDzialanie();
 
-  liczba1 = pobierzLiczbę1();
-  liczba2 = pobierzLiczbę2(działanie);
+  liczba1 = pobierzLiczbe1();
+  liczba2 = pobierzLiczbe2(działanie);
 
   const wynik = wykonajDziałanie(działanie, liczba1, liczba2);
 
