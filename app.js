@@ -4,13 +4,13 @@ function pobierzDzialanie() {
   let kontynuuj = false;
 
   while (!kontynuuj) {
-    let działanie = prompt("Jakie działanie chcesz wykonać? ");
+    let dzialanie = prompt("Jakie działanie chcesz wykonać? ");
 
     if (
-      działanie === "dodawanie" ||
-      działanie === "odejmowanie" ||
-      działanie === "mnożenie" ||
-      działanie === "dzielenie"
+      dzialanie === "dodawanie" ||
+      dzialanie === "odejmowanie" ||
+      dzialanie === "mnożenie" ||
+      dzialanie === "dzielenie"
     ) {
       kontynuuj = true;
     } else {
@@ -18,7 +18,7 @@ function pobierzDzialanie() {
     }
   }
 
-  return działanie;
+  return dzialanie;
 }
 
 function pobierzLiczbe1() {
@@ -38,7 +38,7 @@ function pobierzLiczbe1() {
   return liczba1;
 }
 
-function pobierzLiczbe2(działanie) {
+function pobierzLiczbe2(dzialanie) {
   let kontynuuj = false;
 
   while (!kontynuuj) {
@@ -48,7 +48,7 @@ function pobierzLiczbe2(działanie) {
     if (isNaN(liczba2)) {
       console.log("Proszę podać poprawną liczbę!");
     } else {
-      if (działanie === "dzielenie" && liczba2 === 0) {
+      if (dzialanie === "dzielenie" && liczba2 === 0) {
         console.log("Dzielnik nie może być równy 0!");
       } else {
         kontynuuj = true;
@@ -59,25 +59,25 @@ function pobierzLiczbe2(działanie) {
   return liczba2;
 }
 
-function wykonajDziałanie(działanie, liczba1, liczba2) {
-  if (działanie === "dodawanie") {
+function wykonajDzialanie(dzialanie, liczba1, liczba2) {
+  if (dzialanie === "dodawanie") {
     return liczba1 + liczba2;
-  } else if (działanie === "odejmowanie") {
+  } else if (dzialanie === "odejmowanie") {
     return liczba1 - liczba2;
-  } else if (działanie === "mnożenie") {
+  } else if (dzialanie === "mnożenie") {
     return liczba1 * liczba2;
-  } else if (działanie === "dzielenie") {
+  } else if (dzialanie === "dzielenie") {
     return liczba1 / liczba2;
   }
 }
 
 function main() {
-  działanie = pobierzDzialanie();
+  dzialanie = pobierzDzialanie();
 
   liczba1 = pobierzLiczbe1();
-  liczba2 = pobierzLiczbe2(działanie);
+  liczba2 = pobierzLiczbe2(dzialanie);
 
-  const wynik = wykonajDziałanie(działanie, liczba1, liczba2);
+  const wynik = wykonajDzialanie(dzialanie, liczba1, liczba2);
 
   console.log(wynik);
 }
